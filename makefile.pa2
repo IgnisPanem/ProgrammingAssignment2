@@ -1,0 +1,16 @@
+
+#Go to compile both filecnt.cpp and filedisp.cpp
+all: filedisp filecnt
+
+#compile filedisp.cpp
+filedisp: filedisp.cpp
+	g++-9 --std=c++17 -o filedisp filedisp.cpp 
+	g++ -c version.cpp
+	
+#compile filedisp.cpp
+filecnt: filecnt.cpp
+	g++-9 --std=c++17 -o filecnt filecnt.cpp 
+
+#clear everything
+clean:
+	rm *.o filedisp filecnt
